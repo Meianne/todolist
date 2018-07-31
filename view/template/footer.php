@@ -1,10 +1,9 @@
   </main>
 
-  <footer>
-    <div class="jumbotron jumbotron-fluid my-0">
-      <div class="container">
-        <p class="lead">Realized by Meian.</p>
-      </div>
+  <footer class="jumbotron jumbotron-fluid text-center py-2 my-0">
+    <div class="container">
+      <p class="lead">Realized by Meian.</p>
+    </div>
   </footer>
 
 

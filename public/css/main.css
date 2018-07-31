@@ -96,20 +96,45 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-   body {
-     background-color: #eceff0;
-   }
+  header.jumbotron {
+    background-image: url(../img/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
    body, input {
-     font-size: 1em "Bree", serif;
-     color: red;
+    font-size: 1em "Bree", serif;
+    color: black;
    }
 
-   .items .item.done {
-     text-decoration: line-through;
+   h1 {
+     font-family: 'Paytone One', sans-serif;
    }
 
+   header p, h2 {
+     font-family: 'Aldrich', sans-serif;
+   }
+
+   p {
+     font-family: 'Paytone One', sans-serif;
+   }
+
+   h3, a {
+     font-family: 'Montserrat Alternates', sans-serif;
+     color: black;
+   }
+
+   a:hover {
+     font-family: 'Montserrat Alternates', sans-serif;
+     text-decoration: underline;
+     color: black;
+  }
+
+  footer.jumbotron {
+    background-image: url(../img/footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
 
 

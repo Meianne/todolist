@@ -1,0 +1,34 @@
+autocomplete="off"
+
+
+
+SELECT jeux_video.nom, proprietaires.prenom
+FROM proprietaires, jeux_video
+WHERE jeux_video.ID_proprietaire = proprietaires.ID
+
+
+SELECT jeux_video.nom AS nom_jeu, proprietaires.prenom AS prenom_proprietaire
+FROM proprietaires, jeux_video
+WHERE jeux_video.ID_proprietaire = proprietaires.ID
+
+SELECT j.nom AS nom_jeu, p.prenom AS prenom_proprietaire
+FROM proprietaires AS p, jeux_video AS j
+WHERE j.ID_proprietaire = p.ID
+
+SELECT j.nom nom_jeu, p.prenom prenom_proprietaire
+FROM proprietaires p, jeux_video j
+WHERE j.ID_proprietaire = p.ID
+
+
+SELECT j.nom nom_jeu, p.prenom prenom_proprietaire
+FROM proprietaires p
+INNER JOIN jeux_video j
+ON j.ID_proprietaire = p.ID
+
+SELECT j.nom nom_jeu, p.prenom prenom_proprietaire
+FROM proprietaires p
+INNER JOIN jeux_video j
+ON j.ID_proprietaire = p.ID
+WHERE j.console = 'PC'
+ORDER BY prix DESC
+LIMIT 0, 10

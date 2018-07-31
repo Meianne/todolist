@@ -15,23 +15,23 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+
+  <link rel="stylesheet" href="../public/css/normalize.css">
+  <link rel="stylesheet" href="../public/css/main.css">
 
 </head>
 
 <body>
-  <!-- <?php
-    // require "products.php"
-  ?> -->
 
-  <div class="jumbotron jumbotron-fluid my-0 text-center">
+  <header class="jumbotron jumbotron-fluid my-0 text-center">
     <div class="container">
       <h1 class="display-4">To-Do List</h1>
-      <p class="lead">Vôtre To-Do List personnalisée</p>
     </div>
-  </div>
+  </header>
 
   <main class="container my-5">

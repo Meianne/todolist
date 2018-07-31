@@ -1,32 +1,37 @@
-<?php
+<?php require "template/header.php" ?>
+<?php require "template/nav.php" ?>
 
-require_once '../controller/index.php';
-require_once '../model/connexion.php'
-
- ?>
-
- <div class="list">
-   <h1 class="header">To do</h1>
-
-   <?php if (!empty($items)) : ?>
-   <ul>
-     <?php foreach ($items as $item): ?>
-     <li>
-       <span><?php echo $item['name']; ?></span>
-       <?php if (!$item['done']): ?>
-         <a href="../model/mark.php?as=done&item=<?php echo $item['id']; ?>">Terminé</a>
-         <a href="../model/mark.php?as=notdone&item=<?php echo $item['id']; ?>">Pas terminé</a>
+   <div class="container text-center my-2">
+     <h2>To do</h2>
+       <?php if (!empty($projects)) : ?>
+       <ul>
+         <div class="d-flex flex-wrap justify-content-around py-5">
+            <?php
+             // Affiche les produits récupérés en BDD
+               foreach ($projects as $key => $project) {
+                 echo "<article>
+                 <h3>" . $project['name'] ."</h3> <br>" .
+                 $project['created'] . "<br>";
+                 //Lien qui transfère l'id de l'objet vers single.php
+                echo "<a href='single.php?id=" . $project['id'] . "'>Voir le projet</a> " . '</article> ';
+                // echo "<a href='single.php?id=" . $project['id'] . '><i class="fas fa-search-plus"></i> Voir le projet</a>' . "</article>";
+                // echo '<form action="delete_project_post.php" method="post">
+                //   <input type="hidden" name="id" value='. $project['id'] . '>
+                //   <input type="submit" name="deleteproduit" value="Supprimer">
+                // </form>'
+               }
+            ?>
+          </div>
+       </ul>
+       <?php else: ?>
+          <p>Vous n'avez pas de projets en cours.</p>
        <?php endif; ?>
-     </li>
-   <?php endforeach; ?>
-   </ul>
- <?php else: ?>
-   <p>Vous n'avez pas de projets en cours.</p>
- <?php endif; ?>
 
-   <form class="item-add" action="add.php" method="post">
-     <input type="text" name="name" placeholder="Ajouter la tâche ici." class="input" autocomplete="off" required>
-     <input type="submit" value="Ajouter" class="">
+   <form action="../model/add_project_post.php" method="post">
+    <p><i class="fas fa-plus-circle"></i> Ajouter un projet :</p>
+     <p><input type="text" name="name" required></p>
+     <p><input type="submit" name="ajoutprojet" value="Enregistrer"></p>
    </form>
+  </div>
 
- </div>
+  <?php require "template/footer.php" ?>
